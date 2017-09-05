@@ -16,6 +16,8 @@ namespace CalQv0._1
         public Form1()
         {
             InitializeComponent();
+            int x = 2;
+            x = x + 1;
         }
     }
 }
