@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace CalQv0._1
 {
+    // tangina mo migel
     public partial class Form1 : Form
     {
         public Form1()
