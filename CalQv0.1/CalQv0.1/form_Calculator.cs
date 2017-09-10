@@ -18,6 +18,7 @@ namespace CalQv0._1
         int addItem_Counter = 0;
         int columnNo , lv_Counter;
         int[] xArr = new int[20];
+        int[] bArr = new int[20];
         
 
         public form_Calculator()
@@ -34,6 +35,7 @@ namespace CalQv0._1
 
         private void btn_Proceed_Click(object sender, EventArgs e)
         {
+            lbl_inputValue.Text = "Input the value of b: ";
             listView1.Columns.Add("b");
             columnNo = (int)columnUD.Value;
             tabControl1.SelectedIndex = 1;
@@ -43,11 +45,16 @@ namespace CalQv0._1
             for (int x = 1; x <= columnNo; x++)
             {
                 listView1.Columns.Add("x"+x);
+               
 
             }
         }
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
+            //sa part nato ung pang display pag pinindot ung confirm button
+            // lalabas dapat ung isang row.
+            btn_Add.Enabled = true;
+            lbl_inputValue.Text = "Input the value of b: ";
             for (lv_Counter = 0; lv_Counter < columnNo; lv_Counter++)
             {
                 ListViewItem lvi = new ListViewItem();
@@ -57,18 +64,30 @@ namespace CalQv0._1
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-
+            lbl_inputValue.Text = "Input the value of x: ";
             columnNo = (int)columnUD.Value;
 
-            xArr[addItem_Counter] = (int)values_UD.Value;
+            //pang add ng value sa b
+            
+            bArr[addItem_Counter] = (int)values_UD.Value;
+
+            //pang add ng value sa x
+            
+            if (addItem_Counter == 1)
+            {
+                
+                xArr[addItem_Counter] = (int)values_UD.Value;
+            }
+            // dun sa calculator naten di kasama sa number of columns ung b kaya
+            // ginawa kong addItem_Counter +1 para sakto parin sa array;
 
             addItem_Counter = addItem_Counter + 1;
 
             values_UD.Value = 0;
 
-            listView1.Items.Add(Convert.ToString(x_Value));
+            //listView1.Items.Add(Convert.ToString(x_Value));
 
-            if(addItem_Counter == columnNo )
+            if(addItem_Counter == columnNo+1 )
             {
                 btn_Add.Enabled = false;
             }
