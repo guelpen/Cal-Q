@@ -43,7 +43,7 @@
             this.values_UD = new System.Windows.Forms.NumericUpDown();
             this.btn_Confirm = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_inputValue = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -169,7 +169,7 @@
             this.tabPage2.Controls.Add(this.values_UD);
             this.tabPage2.Controls.Add(this.btn_Confirm);
             this.tabPage2.Controls.Add(this.btn_Add);
-            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.lbl_inputValue);
             this.tabPage2.Controls.Add(this.listView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -181,14 +181,14 @@
             // values_UD
             // 
             this.values_UD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.values_UD.Location = new System.Drawing.Point(24, 278);
+            this.values_UD.Location = new System.Drawing.Point(21, 278);
             this.values_UD.Name = "values_UD";
             this.values_UD.Size = new System.Drawing.Size(53, 26);
             this.values_UD.TabIndex = 6;
             // 
             // btn_Confirm
             // 
-            this.btn_Confirm.Location = new System.Drawing.Point(173, 278);
+            this.btn_Confirm.Location = new System.Drawing.Point(170, 278);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(75, 26);
             this.btn_Confirm.TabIndex = 5;
@@ -198,7 +198,7 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(92, 278);
+            this.btn_Add.Location = new System.Drawing.Point(89, 278);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(75, 26);
             this.btn_Add.TabIndex = 4;
@@ -206,15 +206,15 @@
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // label3
+            // lbl_inputValue
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 246);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Input values of Matrix :";
+            this.lbl_inputValue.AutoSize = true;
+            this.lbl_inputValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_inputValue.Location = new System.Drawing.Point(20, 246);
+            this.lbl_inputValue.Name = "lbl_inputValue";
+            this.lbl_inputValue.Size = new System.Drawing.Size(167, 20);
+            this.lbl_inputValue.TabIndex = 3;
+            this.lbl_inputValue.Text = "Input values of Matrix :";
             // 
             // listView1
             // 
@@ -261,7 +261,7 @@
         private System.Windows.Forms.NumericUpDown rowUD;
         private System.Windows.Forms.Button btn_Proceed;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_inputValue;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.NumericUpDown values_UD;
