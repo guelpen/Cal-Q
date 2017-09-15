@@ -38,6 +38,11 @@ namespace CalQv0._1
             this.Close();
         }
 
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void btn_Proceed_Click(object sender, EventArgs e)
         {
             lbl_inputValue.Text = "Input the value of b: ";

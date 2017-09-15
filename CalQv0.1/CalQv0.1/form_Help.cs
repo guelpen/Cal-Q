@@ -16,5 +16,15 @@ namespace CalQv0._1
         {
             InitializeComponent();
         }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

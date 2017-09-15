@@ -112,5 +112,17 @@
   <ItemGroup>
     <None Include="Resources\CalQ_Wallpaper.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backIcon2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
