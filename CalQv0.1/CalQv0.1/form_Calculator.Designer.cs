@@ -45,6 +45,8 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.lbl_inputValue = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.solve = new System.Windows.Forms.Button();
+            this.disp = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -166,6 +168,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.disp);
+            this.tabPage2.Controls.Add(this.solve);
             this.tabPage2.Controls.Add(this.values_UD);
             this.tabPage2.Controls.Add(this.btn_Confirm);
             this.tabPage2.Controls.Add(this.btn_Add);
@@ -225,6 +229,24 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
+            // solve
+            // 
+            this.solve.Location = new System.Drawing.Point(228, 325);
+            this.solve.Name = "solve";
+            this.solve.Size = new System.Drawing.Size(75, 26);
+            this.solve.TabIndex = 7;
+            this.solve.Text = "Solve";
+            this.solve.UseVisualStyleBackColor = true;
+            // 
+            // disp
+            // 
+            this.disp.AutoSize = true;
+            this.disp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.disp.Location = new System.Drawing.Point(324, 278);
+            this.disp.Name = "disp";
+            this.disp.Size = new System.Drawing.Size(0, 20);
+            this.disp.TabIndex = 8;
+            // 
             // form_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,5 +287,7 @@
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.NumericUpDown values_UD;
+        private System.Windows.Forms.Label disp;
+        private System.Windows.Forms.Button solve;
     }
 }
