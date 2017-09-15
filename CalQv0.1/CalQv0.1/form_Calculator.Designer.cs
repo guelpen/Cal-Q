@@ -40,15 +40,15 @@
             this.rowUD = new System.Windows.Forms.NumericUpDown();
             this.btn_Back = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.inputs = new System.Windows.Forms.Label();
+            this.rinp = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.solve = new System.Windows.Forms.Button();
             this.values_UD = new System.Windows.Forms.NumericUpDown();
             this.btn_Confirm = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.lbl_inputValue = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rinp = new System.Windows.Forms.Label();
-            this.inputs = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -186,9 +186,37 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // inputs
+            // 
+            this.inputs.AutoSize = true;
+            this.inputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputs.Location = new System.Drawing.Point(298, 280);
+            this.inputs.Name = "inputs";
+            this.inputs.Size = new System.Drawing.Size(0, 20);
+            this.inputs.TabIndex = 12;
+            // 
+            // rinp
+            // 
+            this.rinp.AutoSize = true;
+            this.rinp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rinp.Location = new System.Drawing.Point(402, 246);
+            this.rinp.Name = "rinp";
+            this.rinp.Size = new System.Drawing.Size(0, 20);
+            this.rinp.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(298, 246);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Input for row";
+            // 
             // solve
             // 
-            this.solve.Location = new System.Drawing.Point(228, 325);
+            this.solve.Location = new System.Drawing.Point(89, 325);
             this.solve.Name = "solve";
             this.solve.Size = new System.Drawing.Size(75, 26);
             this.solve.TabIndex = 7;
@@ -215,7 +243,7 @@
             // 
             // btn_Confirm
             // 
-            this.btn_Confirm.Location = new System.Drawing.Point(170, 278);
+            this.btn_Confirm.Location = new System.Drawing.Point(373, 325);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(75, 26);
             this.btn_Confirm.TabIndex = 5;
@@ -251,34 +279,6 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(298, 246);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Input for row";
-            // 
-            // rinp
-            // 
-            this.rinp.AutoSize = true;
-            this.rinp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rinp.Location = new System.Drawing.Point(402, 246);
-            this.rinp.Name = "rinp";
-            this.rinp.Size = new System.Drawing.Size(0, 20);
-            this.rinp.TabIndex = 11;
-            // 
-            // inputs
-            // 
-            this.inputs.AutoSize = true;
-            this.inputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputs.Location = new System.Drawing.Point(298, 280);
-            this.inputs.Name = "inputs";
-            this.inputs.Size = new System.Drawing.Size(0, 20);
-            this.inputs.TabIndex = 12;
             // 
             // form_Calculator
             // 
