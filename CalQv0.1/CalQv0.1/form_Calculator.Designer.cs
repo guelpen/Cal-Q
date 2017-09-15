@@ -40,13 +40,15 @@
             this.rowUD = new System.Windows.Forms.NumericUpDown();
             this.btn_Back = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.solve = new System.Windows.Forms.Button();
             this.values_UD = new System.Windows.Forms.NumericUpDown();
             this.btn_Confirm = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.lbl_inputValue = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.solve = new System.Windows.Forms.Button();
-            this.disp = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.rinp = new System.Windows.Forms.Label();
+            this.inputs = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -168,7 +170,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.disp);
+            this.tabPage2.Controls.Add(this.inputs);
+            this.tabPage2.Controls.Add(this.rinp);
+            this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.solve);
             this.tabPage2.Controls.Add(this.values_UD);
             this.tabPage2.Controls.Add(this.btn_Confirm);
@@ -182,10 +186,29 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // solve
+            // 
+            this.solve.Location = new System.Drawing.Point(228, 325);
+            this.solve.Name = "solve";
+            this.solve.Size = new System.Drawing.Size(75, 26);
+            this.solve.TabIndex = 7;
+            this.solve.Text = "Solve";
+            this.solve.UseVisualStyleBackColor = true;
+            // 
             // values_UD
             // 
             this.values_UD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.values_UD.Location = new System.Drawing.Point(21, 278);
+            this.values_UD.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.values_UD.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
             this.values_UD.Name = "values_UD";
             this.values_UD.Size = new System.Drawing.Size(53, 26);
             this.values_UD.TabIndex = 6;
@@ -229,23 +252,33 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // solve
+            // label4
             // 
-            this.solve.Location = new System.Drawing.Point(228, 325);
-            this.solve.Name = "solve";
-            this.solve.Size = new System.Drawing.Size(75, 26);
-            this.solve.TabIndex = 7;
-            this.solve.Text = "Solve";
-            this.solve.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(298, 246);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Input for row";
             // 
-            // disp
+            // rinp
             // 
-            this.disp.AutoSize = true;
-            this.disp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.disp.Location = new System.Drawing.Point(324, 278);
-            this.disp.Name = "disp";
-            this.disp.Size = new System.Drawing.Size(0, 20);
-            this.disp.TabIndex = 8;
+            this.rinp.AutoSize = true;
+            this.rinp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rinp.Location = new System.Drawing.Point(402, 246);
+            this.rinp.Name = "rinp";
+            this.rinp.Size = new System.Drawing.Size(0, 20);
+            this.rinp.TabIndex = 11;
+            // 
+            // inputs
+            // 
+            this.inputs.AutoSize = true;
+            this.inputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputs.Location = new System.Drawing.Point(298, 280);
+            this.inputs.Name = "inputs";
+            this.inputs.Size = new System.Drawing.Size(0, 20);
+            this.inputs.TabIndex = 12;
             // 
             // form_Calculator
             // 
@@ -287,7 +320,9 @@
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.NumericUpDown values_UD;
-        private System.Windows.Forms.Label disp;
         private System.Windows.Forms.Button solve;
+        private System.Windows.Forms.Label inputs;
+        private System.Windows.Forms.Label rinp;
+        private System.Windows.Forms.Label label4;
     }
 }

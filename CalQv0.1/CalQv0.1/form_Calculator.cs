@@ -13,14 +13,15 @@ namespace CalQv0._1
     public partial class form_Calculator : Form
     {
         //variables
-        int[,] aprc;
-        int clmi, rwi;
-
+        int[,] AP_rocol; //rocol=row, column
+        int ro, col,col_i, ro_i , col_ctr, ro_ctr;
+        String all_values;
         public form_Calculator()
         {
             InitializeComponent();
-            
-
+            all_values = "";
+            ro_i = 1;
+            col_i = 1;
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -32,61 +33,30 @@ namespace CalQv0._1
         {
             lbl_inputValue.Text = "Input the value of b: ";
             listView1.Columns.Add("b");
-            rwi = (int)rowUD.Value;
-            clmi = (int)columnUD.Value;
+            ro = (int)rowUD.Value;
+            col= (int)columnUD.Value;
             tabControl1.SelectedIndex = 1;
-            //listView1.Columns.Add("b");
             //dummy code
             
-            for (int x = 1; x <= (clmi-1); x++)
+            for (int x = 1; x <= (col-1); x++)
             {
                 listView1.Columns.Add("x"+x);
-               
-
             }
         }
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            /*sa part nato ung pang display pag pinindot ung confirm button
-            // lalabas dapat ung isang row.
-            btn_Add.Enabled = true;
-            lbl_inputValue.Text = "Input the value of b: ";
-            for (lv_Counter = 0; lv_Counter < columnNo; lv_Counter++)
-            {
-                ListViewItem lvi = new ListViewItem();
-
-            }*/
+            
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            /*lbl_inputValue.Text = "Input the value of x: ";
-            columnNo = (int)columnUD.Value;
-
-            //pang add ng value sa b
-            
-            bArr[addItem_Counter] = (int)values_UD.Value;
-
-            //pang add ng value sa x
-            
-            if (addItem_Counter == 1)
+            int tv = (int)values_UD.Value;
+            if (col_i<=col)
             {
-                
-                xArr[addItem_Counter] = (int)values_UD.Value;
+                all_values = all_values + tv.ToString() + "    ";
+                col_i++;
             }
-            // dun sa calculator naten di kasama sa number of columns ung b kaya
-            // ginawa kong addItem_Counter +1 para sakto parin sa array;
-
-            addItem_Counter = addItem_Counter + 1;
-
-            values_UD.Value = 0;
-
-            //listView1.Items.Add(Convert.ToString(x_Value));
-
-            if(addItem_Counter == columnNo+1 )
-            {
-                btn_Add.Enabled = false;
-            }*/
+            
         }
     }
 }
