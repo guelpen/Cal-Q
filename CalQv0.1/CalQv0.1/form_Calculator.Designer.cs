@@ -48,6 +48,7 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.lbl_inputValue = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.columnUD)).BeginInit();
@@ -60,10 +61,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 2);
+            this.tabControl1.Location = new System.Drawing.Point(2, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(581, 418);
+            this.tabControl1.Size = new System.Drawing.Size(602, 417);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -81,7 +82,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(573, 392);
+            this.tabPage1.Size = new System.Drawing.Size(573, 366);
             this.tabPage1.TabIndex = 0;
             // 
             // closeButton
@@ -183,7 +184,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(573, 392);
+            this.tabPage2.Size = new System.Drawing.Size(594, 391);
             this.tabPage2.TabIndex = 1;
             // 
             // button1
@@ -194,7 +195,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(6, 360);
+            this.button1.Location = new System.Drawing.Point(6, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(32, 24);
             this.button1.TabIndex = 13;
@@ -241,7 +242,7 @@
             this.solve.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.solve.Location = new System.Drawing.Point(445, 350);
+            this.solve.Location = new System.Drawing.Point(465, 351);
             this.solve.Name = "solve";
             this.solve.Size = new System.Drawing.Size(122, 34);
             this.solve.TabIndex = 7;
@@ -274,7 +275,7 @@
             this.btn_Confirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Confirm.Location = new System.Drawing.Point(493, 267);
+            this.btn_Confirm.Location = new System.Drawing.Point(515, 267);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(32, 37);
             this.btn_Confirm.TabIndex = 5;
@@ -317,6 +318,21 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::CalQv0._1.Properties.Resources.closeIcon1;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(561, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(32, 24);
+            this.button2.TabIndex = 14;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // form_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +340,7 @@
             this.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
             this.ClientSize = new System.Drawing.Size(605, 444);
             this.ControlBox = false;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximumSize = new System.Drawing.Size(621, 483);
@@ -363,5 +380,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button button2;
     }
 }
