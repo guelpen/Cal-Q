@@ -43,5 +43,10 @@ namespace CalQv0._1
         {
             Application.Exit();
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
