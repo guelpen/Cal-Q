@@ -189,6 +189,7 @@
             // button1
             // 
             this.button1.BackgroundImage = global::CalQv0._1.Properties.Resources.backIcon2;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
