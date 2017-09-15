@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.closeButton = new System.Windows.Forms.Button();
             this.btn_Proceed = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.lbl_inputValue = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.closeButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.columnUD)).BeginInit();
@@ -65,11 +65,12 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(581, 418);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage1.BackgroundImage = global::CalQv0._1.Properties.Resources.CalQ_Wallpaper;
+            this.tabPage1.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
             this.tabPage1.Controls.Add(this.closeButton);
             this.tabPage1.Controls.Add(this.btn_Proceed);
             this.tabPage1.Controls.Add(this.label2);
@@ -82,6 +83,21 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(573, 392);
             this.tabPage1.TabIndex = 0;
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackgroundImage = global::CalQv0._1.Properties.Resources.closeIcon1;
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Location = new System.Drawing.Point(498, 19);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(32, 24);
+            this.closeButton.TabIndex = 5;
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // btn_Proceed
             // 
@@ -142,7 +158,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.BackgroundImage = global::CalQv0._1.Properties.Resources.CalQ_Wallpaper;
+            this.tabPage2.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.inputs);
             this.tabPage2.Controls.Add(this.rinp);
@@ -156,16 +172,20 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(573, 382);
+            this.tabPage2.Size = new System.Drawing.Size(573, 392);
             this.tabPage2.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(21, 325);
+            this.button1.BackgroundImage = global::CalQv0._1.Properties.Resources.backIcon2;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(6, 360);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 26);
+            this.button1.Size = new System.Drawing.Size(32, 24);
             this.button1.TabIndex = 13;
-            this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -267,26 +287,11 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // closeButton
-            // 
-            this.closeButton.BackgroundImage = global::CalQv0._1.Properties.Resources.closeIcon1;
-            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Location = new System.Drawing.Point(498, 19);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(32, 24);
-            this.closeButton.TabIndex = 5;
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
             // form_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CalQv0._1.Properties.Resources.CalQ_Wallpaper;
+            this.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
             this.ClientSize = new System.Drawing.Size(605, 444);
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
