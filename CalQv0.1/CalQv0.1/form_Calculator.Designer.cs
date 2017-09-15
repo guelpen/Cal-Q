@@ -46,10 +46,9 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.lbl_inputValue = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-<<<<<<< HEAD
+
             this.button1 = new System.Windows.Forms.Button();
-=======
->>>>>>> 53f94eb0704974bb639c0e3882d73f8d17f469e8
+
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.columnUD)).BeginInit();
@@ -246,11 +245,10 @@
             // 
             // btn_Confirm
             // 
-<<<<<<< HEAD
+
             this.btn_Confirm.Location = new System.Drawing.Point(492, 278);
-=======
-            this.btn_Confirm.Location = new System.Drawing.Point(373, 325);
->>>>>>> 53f94eb0704974bb639c0e3882d73f8d17f469e8
+
+          
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(75, 26);
             this.btn_Confirm.TabIndex = 5;
@@ -288,7 +286,7 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-<<<<<<< HEAD
+
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(21, 325);
@@ -299,8 +297,8 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-=======
->>>>>>> 53f94eb0704974bb639c0e3882d73f8d17f469e8
+
+
             // form_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
