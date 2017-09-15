@@ -31,27 +31,24 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_Proceed = new System.Windows.Forms.Button();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.columnUD = new System.Windows.Forms.NumericUpDown();
             this.rowUD = new System.Windows.Forms.NumericUpDown();
             this.btn_Back = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.inputs = new System.Windows.Forms.Label();
+            this.rinp = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.solve = new System.Windows.Forms.Button();
             this.values_UD = new System.Windows.Forms.NumericUpDown();
             this.btn_Confirm = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.lbl_inputValue = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rinp = new System.Windows.Forms.Label();
-            this.inputs = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.columnUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rowUD)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -70,8 +67,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.BackgroundImage = global::CalQv0._1.Properties.Resources.CalQ_Wallpaper;
             this.tabPage1.Controls.Add(this.btn_Proceed);
-            this.tabPage1.Controls.Add(this.tabControl2);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.columnUD);
@@ -82,7 +80,6 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(573, 382);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btn_Proceed
             // 
@@ -94,40 +91,11 @@
             this.btn_Proceed.UseVisualStyleBackColor = true;
             this.btn_Proceed.Click += new System.EventHandler(this.btn_Proceed_Click);
             // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Location = new System.Drawing.Point(537, 287);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(8, 8);
-            this.tabControl2.TabIndex = 3;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(0, 0);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(0, 0);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(122, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 20);
@@ -138,6 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(144, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 20);
@@ -160,9 +129,9 @@
             // 
             // btn_Back
             // 
-            this.btn_Back.Location = new System.Drawing.Point(429, 329);
+            this.btn_Back.Location = new System.Drawing.Point(24, 329);
             this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(106, 31);
+            this.btn_Back.Size = new System.Drawing.Size(59, 31);
             this.btn_Back.TabIndex = 0;
             this.btn_Back.Text = "Back";
             this.btn_Back.UseVisualStyleBackColor = true;
@@ -170,6 +139,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.BackgroundImage = global::CalQv0._1.Properties.Resources.CalQ_Wallpaper;
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.inputs);
             this.tabPage2.Controls.Add(this.rinp);
             this.tabPage2.Controls.Add(this.label4);
@@ -184,7 +156,35 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(573, 382);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // inputs
+            // 
+            this.inputs.AutoSize = true;
+            this.inputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputs.Location = new System.Drawing.Point(298, 280);
+            this.inputs.Name = "inputs";
+            this.inputs.Size = new System.Drawing.Size(0, 20);
+            this.inputs.TabIndex = 12;
+            // 
+            // rinp
+            // 
+            this.rinp.AutoSize = true;
+            this.rinp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rinp.Location = new System.Drawing.Point(402, 246);
+            this.rinp.Name = "rinp";
+            this.rinp.Size = new System.Drawing.Size(0, 20);
+            this.rinp.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(298, 246);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Input for row";
             // 
             // solve
             // 
@@ -215,7 +215,7 @@
             // 
             // btn_Confirm
             // 
-            this.btn_Confirm.Location = new System.Drawing.Point(170, 278);
+            this.btn_Confirm.Location = new System.Drawing.Point(492, 278);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(75, 26);
             this.btn_Confirm.TabIndex = 5;
@@ -237,6 +237,7 @@
             // 
             this.lbl_inputValue.AutoSize = true;
             this.lbl_inputValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_inputValue.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_inputValue.Location = new System.Drawing.Point(20, 246);
             this.lbl_inputValue.Name = "lbl_inputValue";
             this.lbl_inputValue.Size = new System.Drawing.Size(167, 20);
@@ -252,46 +253,31 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // label4
+            // button1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(298, 246);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Input for row";
-            // 
-            // rinp
-            // 
-            this.rinp.AutoSize = true;
-            this.rinp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rinp.Location = new System.Drawing.Point(402, 246);
-            this.rinp.Name = "rinp";
-            this.rinp.Size = new System.Drawing.Size(0, 20);
-            this.rinp.TabIndex = 11;
-            // 
-            // inputs
-            // 
-            this.inputs.AutoSize = true;
-            this.inputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputs.Location = new System.Drawing.Point(298, 280);
-            this.inputs.Name = "inputs";
-            this.inputs.Size = new System.Drawing.Size(0, 20);
-            this.inputs.TabIndex = 12;
+            this.button1.Location = new System.Drawing.Point(21, 325);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 26);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // form_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CalQv0._1.Properties.Resources.CalQ_Wallpaper;
             this.ClientSize = new System.Drawing.Size(605, 444);
+            this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(621, 483);
             this.Name = "form_Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.columnUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rowUD)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -307,9 +293,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown columnUD;
@@ -324,5 +307,6 @@
         private System.Windows.Forms.Label inputs;
         private System.Windows.Forms.Label rinp;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

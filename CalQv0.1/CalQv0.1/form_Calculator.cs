@@ -16,6 +16,12 @@ namespace CalQv0._1
         int[,] AP_rocol; //rocol=row, column
         int ro, col,col_i, ro_i , col_ctr, ro_ctr;
         String all_values;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
+
         public form_Calculator()
         {
             InitializeComponent();

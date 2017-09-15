@@ -63,6 +63,16 @@ namespace CalQv0._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CalQ_Wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("CalQ_Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Wallpaper1 {
             get {
                 object obj = ResourceManager.GetObject("Wallpaper1", resourceCulture);

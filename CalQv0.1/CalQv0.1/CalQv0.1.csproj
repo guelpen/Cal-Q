@@ -109,5 +109,8 @@
   <ItemGroup>
     <None Include="Resources\Wallpaper1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalQ_Wallpaper.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

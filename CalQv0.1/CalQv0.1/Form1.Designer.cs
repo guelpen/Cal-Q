@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CalQv0._1.Properties.Resources.Wallpaper1;
+            this.BackgroundImage = global::CalQv0._1.Properties.Resources.CalQ_Wallpaper;
             this.ClientSize = new System.Drawing.Size(605, 444);
             this.ControlBox = false;
             this.Controls.Add(this.button4);
