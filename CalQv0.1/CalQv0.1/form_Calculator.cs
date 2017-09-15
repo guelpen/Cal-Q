@@ -14,6 +14,7 @@ namespace CalQv0._1
     {
         //variables
         int[,] AP_rocol = new int[100,100]; //rocol=row, column
+        int[,] IM_rocol = new int[100, 100]; //IM= identity matrix
         int ro, col,col_i, ro_i;
         String all_values;
 
@@ -50,6 +51,8 @@ namespace CalQv0._1
 
         private void btn_Proceed_Click(object sender, EventArgs e)
         {
+            int imx, imy, x2,x3;
+            string im="";
             lbl_inputValue.Text = "Input the value of b: ";
             listView1.Columns.Add("b");
             ro = (int)rowUD.Value;
@@ -61,6 +64,25 @@ namespace CalQv0._1
             {
                 listView1.Columns.Add("x"+x);
             }
+            for ( imy = 1; imy <= ro; imy++ )
+            {
+                for ( imx = 1; imx <= ro; imx++ )
+                {
+                    if (imx == imy) { IM_rocol[imy, imx] = 1; }
+                    else IM_rocol[imx, imy] = 0;
+                }
+            }
+            for (x2 = 1; x2 <= ro; x2++)
+            {
+                for (x3 = 1; x3 <= ro; x3++)
+                {
+                    if( x3 == ro )
+                        im = im + IM_rocol[x2, x3].ToString() + "\n";
+                    else
+                        im = im + IM_rocol[x2, x3].ToString() + "   ";
+                }
+            }
+            MessageBox.Show(im);
         }
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
