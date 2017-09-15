@@ -38,12 +38,6 @@ namespace CalQv0._1
             form_Tutorials frm = new form_Tutorials();
             frm.Show();
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
