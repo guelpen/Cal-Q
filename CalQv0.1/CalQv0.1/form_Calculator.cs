@@ -49,6 +49,11 @@ namespace CalQv0._1
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void btn_Proceed_Click(object sender, EventArgs e)
         {
             int imx, imy, x2,x3;
