@@ -43,6 +43,11 @@ namespace CalQv0._1
             Application.Exit();
         }
 
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btn_Proceed_Click(object sender, EventArgs e)
         {
             lbl_inputValue.Text = "Input the value of b: ";
