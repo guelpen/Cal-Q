@@ -169,5 +169,83 @@
   <ItemGroup>
     <None Include="Resources\tickmark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\convertLabel_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sentence_step1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subject To.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Step1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Step11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step_2lbl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Step2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Step2_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step3_lbl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step3_lbl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step3_lbl3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step4_lbl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step4_lbl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step2_last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step_4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
