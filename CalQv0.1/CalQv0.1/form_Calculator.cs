@@ -71,17 +71,17 @@ namespace CalQv0._1
             }
             for ( imy = 1; imy <= ro; imy++ )
             {
-                for ( imx = 1; imx <= ro; imx++ )
+                for ( imx = 1; imx <= ro-1; imx++ )
                 {
-                    if (imx == imy) { IM_rocol[imy, imx] = 1; }
+                    if (imx == imy-1) { IM_rocol[imy, imx] = 1; }
                     else IM_rocol[imx, imy] = 0;
                 }
             }
             for (x2 = 1; x2 <= ro; x2++)
             {
-                for (x3 = 1; x3 <= ro; x3++)
+                for (x3 = 1; x3 <= ro-1; x3++)
                 {
-                    if( x3 == ro )
+                    if( x3 == ro-1 )
                         im = im + IM_rocol[x2, x3].ToString() + "\n";
                     else
                         im = im + IM_rocol[x2, x3].ToString() + "   ";
