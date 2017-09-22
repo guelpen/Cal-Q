@@ -247,5 +247,23 @@
   <ItemGroup>
     <None Include="Resources\step_4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3rdStep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step 4_x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step_4_qq.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
