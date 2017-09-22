@@ -30,7 +30,7 @@ namespace CalQv0._1
             all_values = "";
             ro_i = 1;
             col_i = 1;
-            icc = 1;
+            icc = 0;
             btn_Add.Enabled = true;
             btn_Confirm.Enabled = false;
             solve.Enabled = false;
@@ -81,11 +81,8 @@ namespace CalQv0._1
             {
                 if (AP_rocol[1, zf] == 0)
                 {
+                    icc++;
                     IC[icc] = zf;
-                    if (zf!=col)
-                    {
-                        icc++;
-                    }
                 }
             }
             for (zf = 1; zf <= icc; zf++) { im2 = im2 + IC[zf].ToString() + "    "; }
