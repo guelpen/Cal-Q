@@ -82,7 +82,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(573, 366);
+            this.tabPage1.Size = new System.Drawing.Size(594, 391);
             this.tabPage1.TabIndex = 0;
             // 
             // closeButton
@@ -247,6 +247,7 @@
             this.solve.Size = new System.Drawing.Size(122, 34);
             this.solve.TabIndex = 7;
             this.solve.UseVisualStyleBackColor = true;
+            this.solve.Click += new System.EventHandler(this.solve_Click);
             // 
             // values_UD
             // 

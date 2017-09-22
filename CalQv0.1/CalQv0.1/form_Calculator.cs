@@ -15,7 +15,8 @@ namespace CalQv0._1
         //variables
         int[,] AP_rocol = new int[100,100]; //rocol=row, column
         int[,] IM_rocol = new int[100, 100]; //IM= identity matrix
-        int ro, col,col_i, ro_i;
+        int[] IC = new int[100];
+        int ro, col,col_i, ro_i, icc;
         String all_values;
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace CalQv0._1
             all_values = "";
             ro_i = 1;
             col_i = 1;
+            icc = 1;
             btn_Add.Enabled = true;
             btn_Confirm.Enabled = false;
             solve.Enabled = false;
@@ -52,6 +54,42 @@ namespace CalQv0._1
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void solve_Click(object sender, EventArgs e)
+        {
+            int x2, x3;
+            int zf;
+            string im = "", im2= "";
+            ro = (int)rowUD.Value;
+            col = (int)columnUD.Value;
+            tabControl1.SelectedIndex = 1;
+            //dummy code
+            rinp.Text = ro_i.ToString();
+            for (x2 = 1; x2 <= ro; x2++)
+            {
+                for (x3 = 1; x3 <= col; x3++)
+                {
+                    if (x3 == col)
+                        im = im + AP_rocol[x2, x3].ToString() + "\n";
+                    else
+                        im = im + AP_rocol[x2, x3].ToString() + "   ";
+                }
+            }
+            //MessageBox.Show(im);
+            for (zf = 1; zf <= col; zf++)
+            {
+                if (AP_rocol[1, zf] == 0)
+                {
+                    IC[icc] = zf;
+                    if (zf!=col)
+                    {
+                        icc++;
+                    }
+                }
+            }
+            for (zf = 1; zf <= icc; zf++) { im2 = im2 + IC[zf].ToString() + "    "; }
+            MessageBox.Show(im2);
         }
 
         private void btn_Proceed_Click(object sender, EventArgs e)
