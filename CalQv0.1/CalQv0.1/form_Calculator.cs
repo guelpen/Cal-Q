@@ -61,7 +61,7 @@ namespace CalQv0._1
         {
             int x2, x3, x4;
             int zf;
-            string im = "", im2= "";
+            string im = "";
             ro = (int)rowUD.Value;
             col = (int)columnUD.Value;
             tabControl1.SelectedIndex = 1;
@@ -103,8 +103,6 @@ namespace CalQv0._1
                 }
                 listView1.Items.Add(lvi);
             }
-            for (zf = 1; zf <= icc; zf++) { im2 = im2 + IC[zf].ToString() + "    "; }
-            MessageBox.Show(im2);
         }
 
         private void btn_Proceed_Click(object sender, EventArgs e)
