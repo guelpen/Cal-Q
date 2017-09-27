@@ -34,6 +34,7 @@ namespace CalQv0._1
             btn_Add.Enabled = true;
             btn_Confirm.Enabled = false;
             solve.Enabled = false;
+            IC[1] = 100;
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -58,9 +59,9 @@ namespace CalQv0._1
 
         private void solve_Click(object sender, EventArgs e)
         {
-            int x2, x3;
+            int x2, x3, x4;
             int zf;
-            string im = "", im2= "";
+            string im = "";
             ro = (int)rowUD.Value;
             col = (int)columnUD.Value;
             tabControl1.SelectedIndex = 1;
@@ -76,7 +77,6 @@ namespace CalQv0._1
                         im = im + AP_rocol[x2, x3].ToString() + "   ";
                 }
             }
-            //MessageBox.Show(im);
             for (zf = 1; zf <= col; zf++)
             {
                 if (AP_rocol[1, zf] == 0)
@@ -85,8 +85,24 @@ namespace CalQv0._1
                     IC[icc] = zf;
                 }
             }
-            for (zf = 1; zf <= icc; zf++) { im2 = im2 + IC[zf].ToString() + "    "; }
-            MessageBox.Show(im2);
+            if (IC[1] == 100)
+            {
+                for (x4 = 1; x4 <= col; x4++)
+                {
+                    AP_rocol[1, x4] = 0;
+                }
+            }
+            listView1.Items.Clear();
+            for (x3 = 1; x3 <= ro; x3++)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = AP_rocol[x3, 1].ToString();
+                for (x4 = 2; x4 <= col; x4++)
+                {
+                    lvi.SubItems.Add(AP_rocol[x3, x4].ToString());
+                }
+                listView1.Items.Add(lvi);
+            }
         }
 
         private void btn_Proceed_Click(object sender, EventArgs e)
