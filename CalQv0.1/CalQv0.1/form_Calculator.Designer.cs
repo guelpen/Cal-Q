@@ -238,6 +238,8 @@
             // 
             this.solve.BackgroundImage = global::CalQv0._1.Properties.Resources.solve;
             this.solve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.solve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.solve.Enabled = false;
             this.solve.FlatAppearance.BorderSize = 0;
             this.solve.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

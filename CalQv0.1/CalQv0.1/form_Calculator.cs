@@ -15,13 +15,27 @@ namespace CalQv0._1
         //variables
         int[,] AP_rocol = new int[100,100]; //rocol=row, column
         int[,] IM_rocol = new int[100, 100]; //IM= identity matrix
-        int[] IC = new int[100];
+        int[] oo = new int[100];// original objective
+        int oc, irc; //oc = one counter, irc = identity row counter
         int ro, col,col_i, ro_i, icc;
+        int[] icro = new int[100]; //icro = identity column rows
         String all_values;
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int x, y;
             tabControl1.SelectedIndex = 0;
+            listView1.Items.Clear();
+            listView1.Columns.Clear();
+            for (x = 0; x <= 100; x++)
+            {
+                for (y = 0; y <= 100; y++)
+                {
+                    AP_rocol[x, y] = 0;
+                    IM_rocol[x, y] = 0;
+                }
+            }
+            ro = 0; col = 0;
         }
 
         public form_Calculator()
@@ -34,7 +48,7 @@ namespace CalQv0._1
             btn_Add.Enabled = true;
             btn_Confirm.Enabled = false;
             solve.Enabled = false;
-            IC[1] = 100;
+            oc = 0;
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -65,32 +79,72 @@ namespace CalQv0._1
             ro = (int)rowUD.Value;
             col = (int)columnUD.Value;
             tabControl1.SelectedIndex = 1;
-            //dummy code
-            rinp.Text = ro_i.ToString();
-            for (x2 = 1; x2 <= ro; x2++)
+            if (ro_i > ro)
             {
-                for (x3 = 1; x3 <= col; x3++)
-                {
-                    if (x3 == col)
-                        im = im + AP_rocol[x2, x3].ToString() + "\n";
-                    else
-                        im = im + AP_rocol[x2, x3].ToString() + "   ";
-                }
+                label4.Visible = false;
+                rinp.Visible = false;
             }
-            for (zf = 1; zf <= col; zf++)
+            else
             {
-                if (AP_rocol[1, zf] == 0)
-                {
-                    icc++;
-                    IC[icc] = zf;
-                }
+                rinp.Text = ro_i.ToString();
             }
-            if (IC[1] == 100)
+            // multiply rows with -1 if b is negative
+            /* for (zf = 1; zf <= col; zf++)
+             {
+                 if (AP_rocol[1, zf] == 0)
+                 {
+                     for (irc = 2; irc <= ro; irc++)
+                     {
+                         if (AP_rocol[irc, zf] == 1)
+                         {
+                             oc++;
+                             icro[icc] = irc;
+                             icc++;
+                         }
+                         else if (AP_rocol[irc, zf] > 1 || AP_rocol[irc, zf] < 0)
+                         {
+                             oc--;
+                         }
+                     }
+                     if ( oc == 1 )
+                     {
+                         int icc2 = 0, newx, newy=1, anewy;
+                         while (icc2 <= icc)
+                         {
+                             for (newy = 1; newy <= col; newy++)
+                             {
+                                 anewy = newy;
+                                 if (IM_rocol[icro[icc2], newy] == 1)
+                                 {
+                                     up:
+                                     for (newx = 1; newx <= ro; newx++)
+                                     {
+                                         IM_rocol[newx, anewy] = IM_rocol[newx + 1, anewy + 1];
+                                     }
+                                     anewy++;
+                                     if (anewy <= ro) { goto up; }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+             for (x2 = 1; x2 <= ro; x2++)
+             {
+                 for (x3 = 1; x3 <= ro - 1; x3++)
+                 {
+                     if (x3 == ro - 1)
+                         im = im + IM_rocol[x2, x3].ToString() + "\n";
+                     else
+                         im = im + IM_rocol[x2, x3].ToString() + "   ";
+                 }
+             }
+             MessageBox.Show(im);*/ // This part will be subjected to analysis and overhauls
+             // change the original objective function to zero
+            for (x4 = 1; x4 <= col; x4++)
             {
-                for (x4 = 1; x4 <= col; x4++)
-                {
-                    AP_rocol[1, x4] = 0;
-                }
+                oo[x4] = AP_rocol[1, x4];
+                AP_rocol[1, x4] = 0; 
             }
             listView1.Items.Clear();
             for (x3 = 1; x3 <= ro; x3++)
