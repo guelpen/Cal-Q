@@ -141,6 +141,11 @@
             // columnUD
             // 
             this.columnUD.Location = new System.Drawing.Point(256, 179);
+            this.columnUD.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.columnUD.Name = "columnUD";
             this.columnUD.Size = new System.Drawing.Size(120, 20);
             this.columnUD.TabIndex = 1;
@@ -148,6 +153,11 @@
             // rowUD
             // 
             this.rowUD.Location = new System.Drawing.Point(256, 132);
+            this.rowUD.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.rowUD.Name = "rowUD";
             this.rowUD.Size = new System.Drawing.Size(120, 20);
             this.rowUD.TabIndex = 1;
@@ -238,6 +248,8 @@
             // 
             this.solve.BackgroundImage = global::CalQv0._1.Properties.Resources.solve;
             this.solve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.solve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.solve.Enabled = false;
             this.solve.FlatAppearance.BorderSize = 0;
             this.solve.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
