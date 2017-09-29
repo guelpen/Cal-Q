@@ -141,6 +141,11 @@
             // columnUD
             // 
             this.columnUD.Location = new System.Drawing.Point(256, 179);
+            this.columnUD.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.columnUD.Name = "columnUD";
             this.columnUD.Size = new System.Drawing.Size(120, 20);
             this.columnUD.TabIndex = 1;
@@ -148,6 +153,11 @@
             // rowUD
             // 
             this.rowUD.Location = new System.Drawing.Point(256, 132);
+            this.rowUD.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.rowUD.Name = "rowUD";
             this.rowUD.Size = new System.Drawing.Size(120, 20);
             this.rowUD.TabIndex = 1;

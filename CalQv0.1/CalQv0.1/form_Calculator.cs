@@ -13,12 +13,19 @@ namespace CalQv0._1
     public partial class form_Calculator : Form
     {
         //variables
-        int[,] AP_rocol = new int[100, 100];
-        int[,] IM_rocol = new int[100, 100]; //rocol=row, column, IM= identity matrix
-        int[] oo, idset, idro = new int[100];// original objective, identity set, identity row
+        int[,] AP_rocol = new int[9, 9];
+        int[,] IM_rocol = new int[9, 9]; //rocol=row, column, IM= identity matrix
+        int[] idro = new int[9];// original objective, identity set, identity row
         int irc; //oc = one counter, irc = identity row columns
+        int[] toadd = new int[9];
         int ro, col,col_i=1, ro_i=1, icc=1, tv=0;
-        int[] icro = new int[100]; //icro = identity column rows
+        string[] icro = new string[9]; //icro = identity column rows
+        string[] ids = new string[9];
+        string[] mids = new string[9];
+        int[] frmIdGen = new int[9];
+        int[] exclude = new int[9];
+        int strCounter,strCounter2;
+        string tempstr,tempstr2;
         String all_values=" ";
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,6 +56,10 @@ namespace CalQv0._1
             btn_Confirm.Enabled = false;
             solve.Enabled = false;
             inputs.Text = "";
+            tempstr = ""; tempstr2 = "";
+            strCounter = 1;
+            strCounter2 = 1;
+
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -70,11 +81,34 @@ namespace CalQv0._1
         {
             Application.Exit();
         }
-
+        private void Identity_maker()
+        {
+            int x, y;
+            for (x = 1; x < ro; x++)
+            {
+                for (y = 1; y < ro; y++)
+                {
+                    if (x != y)
+                    {
+                        tempstr = tempstr + "0";
+                    }
+                    else if (x == y)
+                    {
+                        tempstr = tempstr + "1";
+                    }
+                }
+                ids[x] = tempstr;
+                tempstr = "";
+            }
+            for (x = 1; x < ro; x++)
+            {
+                tempstr2 = tempstr2 + ids[x] + "\n";
+            }
+            MessageBox.Show(tempstr2);
+        }
         private void solve_Click(object sender, EventArgs e)
         {
-            int x2, x3, x4;
-            string fff="";
+            int x2, x3;
             ro = (int)rowUD.Value;
             col = (int)columnUD.Value;
             irc = ro;
@@ -91,12 +125,7 @@ namespace CalQv0._1
             Set_nMatrix();
             // multiply rows with -1 if b is negative
             // change the original objective function to zero
-            for (x4 = 1; x4 <= icc; x4++)
-            {
-                fff = fff + idro[x4].ToString();
-            }
             listView1.Items.Clear();
-            MessageBox.Show(fff);
             for (x3 = 1; x3 <= ro; x3++)
             {
                 ListViewItem lvi = new ListViewItem();
@@ -123,6 +152,7 @@ namespace CalQv0._1
             }
             // look for parts of designated identity matrix
             Identity_Finder();
+            identity_Generator();
             for (x4 = 1; x4 <= col; x4++)
             {
                 //oo[x4] = AP_rocol[1, x4];
@@ -131,29 +161,74 @@ namespace CalQv0._1
         }
         private void Identity_Finder()
         {
-            int x, x2=0, y, oc=0;
+            int  x,y,z;
             for (y = 1; y <= col; y++)
             {
                 if (AP_rocol[1, y] == 0)
                 {
-                    for (x = 2; x <= ro; x++)
-                    {
-                        if (AP_rocol[x, y] == 1 && oc == 0)
-                        {
-                            oc = 1;
-                            x2 = x;
-                        }
-                        else if (AP_rocol[x,y] != 0 && oc == 1)
-                        {
-                            oc = 0;
-                        }
-                        else if (x == ro && oc == 1)
-                        {
-                            idro[icc] = x2;
-                            icc++;
-                        }
-                    }
+                    idro[icc] = y;
+                    icc++;
                 }
+            }
+            for (z = 1; z <= icc - 1; z++)
+            {
+                for (x = 2; x <= ro; x++)
+                {
+                    icro[z] = icro[z] + AP_rocol[x, idro[z]].ToString();
+                }
+            }
+            for (z = 1; z <= icc; z++)
+            {
+                MessageBox.Show(icro[z]);
+            }
+
+        }
+        private void identity_Generator()
+        {
+            int indx, indxc;
+            string strk = "";
+            string strk2 = "";
+            for(indx = 1; indx < icc; indx++)
+            {
+                for (indxc = 1; indxc <= ro; indxc++)
+                {
+                    if (icro[indx].Equals(ids[indxc]))
+                    {
+                        frmIdGen[strCounter] = indxc;
+                        strCounter++;
+                    }
+                   
+                }
+            }
+            for(int x=1; x <= strCounter; x++)
+            {
+                strk = strk + frmIdGen[x].ToString();
+                MessageBox.Show(strk);
+            }
+          
+            exclude_equal();
+        }
+        private void exclude_equal()
+        {
+            int x, y=1, z=0;
+            string strk2 = "";
+            for (x = 1; x < ro; x++)
+            {
+                if (x == frmIdGen[y])
+                {
+                    y++;
+                    continue;
+                }
+                else
+                {
+                    exclude[strCounter2] = x;
+                    strCounter2++;
+                }
+            }
+            for (x = 1; x <=strCounter2; x++)
+            {
+                strk2 = strk2 + exclude[x].ToString();
+                MessageBox.Show(strk2);
             }
         }
         private void btn_Proceed_Click(object sender, EventArgs e)
@@ -170,6 +245,7 @@ namespace CalQv0._1
             {
                 listView1.Columns.Add("x"+x);
             }
+            Identity_maker();
         }
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
