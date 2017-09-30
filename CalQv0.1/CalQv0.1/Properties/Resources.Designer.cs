@@ -283,6 +283,16 @@ namespace CalQv0._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mainmenu {
+            get {
+                object obj = ResourceManager.GetObject("mainmenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize2 {
             get {
                 object obj = ResourceManager.GetObject("minimize2", resourceCulture);
