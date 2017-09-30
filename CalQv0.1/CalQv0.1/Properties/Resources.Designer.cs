@@ -103,6 +103,16 @@ namespace CalQv0._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3rdStep {
+            get {
+                object obj = ResourceManager.GetObject("3rdStep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4 {
             get {
                 object obj = ResourceManager.GetObject("4", resourceCulture);
@@ -343,6 +353,16 @@ namespace CalQv0._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap step_2 {
+            get {
+                object obj = ResourceManager.GetObject("step 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap step_2lbl {
             get {
                 object obj = ResourceManager.GetObject("step_2lbl", resourceCulture);
@@ -373,9 +393,19 @@ namespace CalQv0._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap step_4 {
+        internal static System.Drawing.Bitmap step_4_qq {
             get {
-                object obj = ResourceManager.GetObject("step_4", resourceCulture);
+                object obj = ResourceManager.GetObject("step_4_qq", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap step_4_x {
+            get {
+                object obj = ResourceManager.GetObject("step 4_x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,6 +536,16 @@ namespace CalQv0._1.Properties {
         internal static System.Drawing.Bitmap tutorial {
             get {
                 object obj = ResourceManager.GetObject("tutorial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
