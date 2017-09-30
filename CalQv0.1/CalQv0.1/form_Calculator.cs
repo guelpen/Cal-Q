@@ -13,12 +13,13 @@ namespace CalQv0._1
     public partial class form_Calculator : Form
     {
         //variables
-        int[,] AP_rocol = new int[9, 9];
-        int[,] IM_rocol = new int[9, 9]; //rocol=row, column, IM= identity matrix
+        int[,] AP_rocol = new int[17, 17];
+        int[] oo = new int[9];
+        int[,] ida = new int[9, 9];
         int[] idro = new int[9];// original objective, identity set, identity row
         int irc; //oc = one counter, irc = identity row columns
         int[] toadd = new int[9];
-        int ro, col,col_i=1, ro_i=1, icc=1, tv=0;
+        int ro, col ,ncol,col_i=1, ro_i=1, icc=1, tv=0;
         string[] icro = new string[9]; //icro = identity column rows
         string[] ids = new string[9];
         string[] mids = new string[9];
@@ -28,30 +29,18 @@ namespace CalQv0._1
         string tempstr,tempstr2;
         string strk2 = "";
         string[] addedId = new string[9];
-        String all_values=" ";
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int x, y;
             tabControl1.SelectedIndex = 0;
             listView1.Items.Clear();
             listView1.Columns.Clear();
-            /*
-            for (x = 0; x <= 100; x++)
-            {
-                for (y = 0; y <= 100; y++)
-                {
-                    AP_rocol[x, y] = 0;
-                  //  IM_rocol[x, y] = 0;
-                }
-            }*/
             ro = 0; col = 0;
         }
 
         public form_Calculator()
         {
             InitializeComponent();
-            all_values = "";
             ro_i = 1;
             col_i = 1;
             icc = 1;
@@ -107,13 +96,13 @@ namespace CalQv0._1
             {
                 tempstr2 = tempstr2 + ids[x] + "\n";
             }
-            MessageBox.Show(tempstr2);
         }
         private void solve_Click(object sender, EventArgs e)
         {
             int x2, x3;
             ro = (int)rowUD.Value;
             col = (int)columnUD.Value;
+            
             irc = ro;
             tabControl1.SelectedIndex = 1;
             if (ro_i > ro)
@@ -129,11 +118,15 @@ namespace CalQv0._1
             // multiply rows with -1 if b is negative
             // change the original objective function to zero
             listView1.Items.Clear();
+            for (int x4 = 1; x4 < strCounter2; x4++)
+            {
+                listView1.Columns.Add("y" + x4);
+            }
             for (x3 = 1; x3 <= ro; x3++)
             {
                 ListViewItem lvi = new ListViewItem();
                 lvi.Text = AP_rocol[x3, 1].ToString();
-                for (x2 = 2; x2 <= col; x2++)
+                for (x2 = 2; x2 <= ncol; x2++)
                 {
                     lvi.SubItems.Add(AP_rocol[x3, x2].ToString());
                 }
@@ -180,17 +173,11 @@ namespace CalQv0._1
                     icro[z] = icro[z] + AP_rocol[x, idro[z]].ToString();
                 }
             }
-            for (z = 1; z <= icc; z++)
-            {
-                MessageBox.Show(icro[z]);
-            }
 
         }
         private void identity_Generator()
         {
             int indx, indxc;
-            string strk = "";
-            string strk2 = "";
             for(indx = 1; indx < icc; indx++)
             {
                 for (indxc = 1; indxc <= ro; indxc++)
@@ -203,17 +190,11 @@ namespace CalQv0._1
                    
                 }
             }
-            for(int x=1; x <= strCounter; x++)
-            {
-                strk = strk + frmIdGen[x].ToString();
-                MessageBox.Show(strk);
-            }
-          
             exclude_equal();
         }
         private void exclude_equal()
         {
-            int x, y=1, z=0;
+            int x, y = 1;
             
             for (x = 1; x < ro; x++)
             {
@@ -231,25 +212,28 @@ namespace CalQv0._1
             for (x = 1; x <=strCounter2; x++)
             {
                 strk2 = strk2 + exclude[x].ToString();
-                MessageBox.Show(strk2);
             }
             add_identity();
         }
 
         private void add_identity()
         {
-            int x, y;
-            for(x=1;x<strCounter2;x++)
+            int x,y;
+            ncol= col + strCounter2 - 1;
+            for (x = 1; x <= ro; x++)
             {
-                addedId[x] = ids[exclude[x]];
-                MessageBox.Show(addedId[x]);
-                   
+                for (y = 1; y <= ncol; y++)
+                {
+                    if (y > col)
+                    {
+                        AP_rocol[exclude[y-col]+1,y]= 1;
+                        AP_rocol[1, y] = 1;
+                    }
+                }
             }
         }
         private void btn_Proceed_Click(object sender, EventArgs e)
         {
-            int imx, imy, x2,x3;
-            string im="";
             lbl_inputValue.Text = "Input the value of b: ";
             listView1.Columns.Add("b");
             ro = (int)rowUD.Value;
@@ -278,7 +262,6 @@ namespace CalQv0._1
                 btn_Confirm.Enabled = false;
                 col_i = 1;
                 ro_i=ro_i+1;
-                all_values = "";
                 inputs.Text = "";
                 rinp.Text = ro_i.ToString();
             }
