@@ -146,9 +146,19 @@
             0,
             0,
             0});
+            this.columnUD.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             this.columnUD.Name = "columnUD";
             this.columnUD.Size = new System.Drawing.Size(120, 20);
             this.columnUD.TabIndex = 1;
+            this.columnUD.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             // 
             // rowUD
             // 
@@ -158,9 +168,19 @@
             0,
             0,
             0});
+            this.rowUD.Minimum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
             this.rowUD.Name = "rowUD";
             this.rowUD.Size = new System.Drawing.Size(120, 20);
             this.rowUD.TabIndex = 1;
+            this.rowUD.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
             // 
             // btn_Back
             // 
