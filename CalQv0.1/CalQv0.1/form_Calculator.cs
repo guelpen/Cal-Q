@@ -26,6 +26,8 @@ namespace CalQv0._1
         int[] exclude = new int[9];
         int strCounter,strCounter2;
         string tempstr,tempstr2;
+        string strk2 = "";
+        string[] addedId = new string[9];
         String all_values=" ";
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,14 +36,15 @@ namespace CalQv0._1
             tabControl1.SelectedIndex = 0;
             listView1.Items.Clear();
             listView1.Columns.Clear();
+            /*
             for (x = 0; x <= 100; x++)
             {
                 for (y = 0; y <= 100; y++)
                 {
                     AP_rocol[x, y] = 0;
-                    IM_rocol[x, y] = 0;
+                  //  IM_rocol[x, y] = 0;
                 }
-            }
+            }*/
             ro = 0; col = 0;
         }
 
@@ -211,7 +214,7 @@ namespace CalQv0._1
         private void exclude_equal()
         {
             int x, y=1, z=0;
-            string strk2 = "";
+            
             for (x = 1; x < ro; x++)
             {
                 if (x == frmIdGen[y])
@@ -229,6 +232,18 @@ namespace CalQv0._1
             {
                 strk2 = strk2 + exclude[x].ToString();
                 MessageBox.Show(strk2);
+            }
+            add_identity();
+        }
+
+        private void add_identity()
+        {
+            int x, y;
+            for(x=1;x<strCounter2;x++)
+            {
+                addedId[x] = ids[exclude[x]];
+                MessageBox.Show(addedId[x]);
+                   
             }
         }
         private void btn_Proceed_Click(object sender, EventArgs e)
