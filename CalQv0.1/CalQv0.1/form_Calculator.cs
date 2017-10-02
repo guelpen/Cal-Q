@@ -13,17 +13,17 @@ namespace CalQv0._1
     public partial class form_Calculator : Form
     {
         //variables
-        int[,] AP_rocol = new int[17, 17];
-        int[] oo = new int[9];
-        int[,] ida = new int[9, 9];
+        float[,] AP_rocol = new float[17, 17];
+        float[] oo = new float[9];
+        float[,] ida = new float[9, 9];
         int[] idro = new int[9];// original objective, identity set, identity row
-        int irc; //oc = one counter, irc = identity row columns
-        int[] toadd = new int[9];
+        float irc; //oc = one counter, irc = identity row columns
+        float[] toadd = new float[9];
         int ro, col ,ncol,col_i=1, ro_i=1, icc=1, tv=0;
         string[] icro = new string[9]; //icro = identity column rows
         string[] ids = new string[9];
         string[] mids = new string[9];
-        int[] frmIdGen = new int[9];
+        float[] frmIdGen = new float[9];
         int[] exclude = new int[9];
         int strCounter,strCounter2;
         string tempstr,tempstr2;
@@ -151,9 +151,10 @@ namespace CalQv0._1
             identity_Generator();
             for (x4 = 1; x4 <= col; x4++)
             {
-                //oo[x4] = AP_rocol[1, x4];
+                oo[x4] = AP_rocol[1, x4];
                 AP_rocol[1, x4] = 0;
             }
+            Solve_identity();
         }
         private void Identity_Finder()
         {
@@ -232,6 +233,95 @@ namespace CalQv0._1
                 }
             }
         }
+        private void Solve_identity()
+        {
+            int x, y, x1,x2, y1,y2, fy=0, fx=0, flag = 1;
+            float mosneg, fmosneg =0 ,leastpos, fleastpos =500000;
+            float[] temppr = new float[17] ;
+            float[] temppr2 = new float[17];
+            float rfy;
+            
+            for (x = 1; x < strCounter2; x++)
+            {
+                for (y = 1; y <= ncol; y++)
+                {
+                    AP_rocol[1, y] = AP_rocol[1, y] - AP_rocol[(exclude[x] + 1), y];
+                }
+            }
+            do
+            {
+                flag = 0;
+                for (y = 1; y <= col; y++)
+                {
+                    if (AP_rocol[1, y] < 0)
+                    {
+                        flag = 1;
+                    }
+                }
+                if (flag == 1)
+                {
+                    for (y1 = 2; y1 <= ncol; y1++)
+                    {
+                        mosneg = AP_rocol[1, y1];
+                        if (mosneg < 0)
+                        {
+                            if (mosneg < fmosneg)
+                            {
+                                fy = y1;
+                                fmosneg = mosneg;
+                            }
+                        }
+                    }
+                    for (x1 = 2; x1 <= ro; x1++)
+                    {
+                        if (AP_rocol[x1, fy] > 0)
+                        {
+                            leastpos = AP_rocol[x1, 1] / AP_rocol[x1, fy];
+                            if (leastpos < fleastpos && leastpos > 0)
+                            {
+                                fx = x1;
+                                fleastpos = leastpos;
+                            }
+                        }
+                    }
+                    rfy = AP_rocol[fx, fy];
+                    for (y2 = 1; y2 <= ncol; y2++)
+                    {
+                        AP_rocol[fx, y2] = AP_rocol[fx, y2] / rfy;
+                    }
+                    for (x2 = 1; x2 <= ro; x2++)
+                    {
+                        temppr2[x2] = AP_rocol[x2, fy];
+                    }
+                    for (y2 = 1; y2 <= ncol; y2++)
+                    {
+                        temppr[y2] = AP_rocol[fx, y2];
+                    }
+                    for (x2 = 1; x2 <= ro; x2++)
+                    {
+                        if (x2 == fx)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            for (y1 = 1; y1 <= ncol; y1++)
+                            {
+                                AP_rocol[x2, y1] = AP_rocol[x2, y1] + ((-1) * (temppr2[x2]) * (temppr[y1]));
+                            }
+                        }
+                    }
+                    flag = 0;
+                    for (y1 = 1; y1 <= col; y1++)
+                    {
+                        if (AP_rocol[1, y1] != 0)
+                        {
+                            flag++;
+                        }
+                    }
+                }
+            }while (flag == 1);
+        }
         private void btn_Proceed_Click(object sender, EventArgs e)
         {
             lbl_inputValue.Text = "Input the value of b: ";
@@ -244,6 +334,8 @@ namespace CalQv0._1
             {
                 listView1.Columns.Add("x"+x);
             }
+
+
             Identity_maker();
         }
         private void btn_Confirm_Click(object sender, EventArgs e)
