@@ -13,17 +13,17 @@ namespace CalQv0._1
     public partial class form_Calculator : Form
     {
         //variables
-        float[,] AP_rocol = new float[17, 17];
-        float[] oo = new float[9];
-        float[,] ida = new float[9, 9];
+        decimal[,] AP_rocol = new decimal[17, 17];
+        decimal[] oo = new decimal[9];
+        decimal[,] ida = new decimal[9, 9];
         int[] idro = new int[9];// original objective, identity set, identity row
-        float irc; //oc = one counter, irc = identity row columns
-        float[] toadd = new float[9];
+        decimal irc; //oc = one counter, irc = identity row columns
+        decimal[] toadd = new decimal[9];
         int ro, col ,ncol,col_i=1, ro_i=1, icc=1, tv=0;
         string[] icro = new string[9]; //icro = identity column rows
         string[] ids = new string[9];
         string[] mids = new string[9];
-        float[] frmIdGen = new float[9];
+        decimal[] frmIdGen = new decimal[9];
         int[] exclude = new int[9];
         int strCounter,strCounter2;
         string tempstr,tempstr2;
@@ -117,20 +117,22 @@ namespace CalQv0._1
             Set_nMatrix();
             // multiply rows with -1 if b is negative
             // change the original objective function to zero
-            listView1.Items.Clear();
-            for (int x4 = 1; x4 < strCounter2; x4++)
+            for (int i = 1; i < listView1.Items.Count;)
             {
-                listView1.Columns.Add("y" + x4);
+                listView1.Items[i].Remove();
             }
             for (x3 = 1; x3 <= ro; x3++)
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.Text = AP_rocol[x3, 1].ToString();
-                for (x2 = 2; x2 <= ncol; x2++)
+                if (x3 != 1)
                 {
-                    lvi.SubItems.Add(AP_rocol[x3, x2].ToString());
+                    lvi.Text = AP_rocol[x3, 1].ToString();
+                    for (x2 = 2; x2 <= col; x2++)
+                    {
+                        lvi.SubItems.Add(Math.Round(AP_rocol[x3, x2],2).ToString());
+                    }
+                    listView1.Items.Add(lvi);
                 }
-                listView1.Items.Add(lvi);
             }
         }
         private void Set_nMatrix()
@@ -151,7 +153,6 @@ namespace CalQv0._1
             identity_Generator();
             for (x4 = 1; x4 <= col; x4++)
             {
-                oo[x4] = AP_rocol[1, x4];
                 AP_rocol[1, x4] = 0;
             }
             Solve_identity();
@@ -176,6 +177,12 @@ namespace CalQv0._1
             }
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void identity_Generator()
         {
             int indx, indxc;
@@ -235,12 +242,7 @@ namespace CalQv0._1
         }
         private void Solve_identity()
         {
-            int x, y, x1,x2, y1,y2, fy=0, fx=0, flag = 1;
-            float mosneg, fmosneg =0 ,leastpos, fleastpos =500000;
-            float[] temppr = new float[17] ;
-            float[] temppr2 = new float[17];
-            float rfy;
-            
+            int x, y, flag = 0;
             for (x = 1; x < strCounter2; x++)
             {
                 for (y = 1; y <= ncol; y++)
@@ -248,79 +250,75 @@ namespace CalQv0._1
                     AP_rocol[1, y] = AP_rocol[1, y] - AP_rocol[(exclude[x] + 1), y];
                 }
             }
-            do
+            Main_solution();
+            for (y = 1; y <= col; y++)
             {
-                flag = 0;
-                for (y = 1; y <= col; y++)
+                if (AP_rocol[1, y] != 0)
+                { flag++; }
+            }
+            if (flag != 0)
+            {
+                Main_solution();
+            }
+        }
+        private void Main_solution()
+        {
+            int x1, x2, y1, y2, fy = 0, fx = 0;
+            decimal mosneg, fmosneg = 0, leastpos, fleastpos = 500000;
+            decimal[] temppr = new decimal[17];
+            decimal[] temppr2 = new decimal[17];
+            decimal rfy;
+            for (y1 = 2; y1 <= ncol; y1++)
+            {
+                mosneg = AP_rocol[1, y1];
+                if (mosneg < 0)
                 {
-                    if (AP_rocol[1, y] < 0)
+                    if (mosneg < fmosneg)
                     {
-                        flag = 1;
+                        fy = y1;
+                        fmosneg = mosneg;
                     }
                 }
-                if (flag == 1)
+            }
+            for (x1 = 2; x1 <= ro; x1++)
+            {
+                if (AP_rocol[x1, fy] > 0)
                 {
-                    for (y1 = 2; y1 <= ncol; y1++)
+                    leastpos = AP_rocol[x1, 1] / AP_rocol[x1, fy];
+                    if (leastpos < fleastpos && leastpos > 0)
                     {
-                        mosneg = AP_rocol[1, y1];
-                        if (mosneg < 0)
-                        {
-                            if (mosneg < fmosneg)
-                            {
-                                fy = y1;
-                                fmosneg = mosneg;
-                            }
-                        }
-                    }
-                    for (x1 = 2; x1 <= ro; x1++)
-                    {
-                        if (AP_rocol[x1, fy] > 0)
-                        {
-                            leastpos = AP_rocol[x1, 1] / AP_rocol[x1, fy];
-                            if (leastpos < fleastpos && leastpos > 0)
-                            {
-                                fx = x1;
-                                fleastpos = leastpos;
-                            }
-                        }
-                    }
-                    rfy = AP_rocol[fx, fy];
-                    for (y2 = 1; y2 <= ncol; y2++)
-                    {
-                        AP_rocol[fx, y2] = AP_rocol[fx, y2] / rfy;
-                    }
-                    for (x2 = 1; x2 <= ro; x2++)
-                    {
-                        temppr2[x2] = AP_rocol[x2, fy];
-                    }
-                    for (y2 = 1; y2 <= ncol; y2++)
-                    {
-                        temppr[y2] = AP_rocol[fx, y2];
-                    }
-                    for (x2 = 1; x2 <= ro; x2++)
-                    {
-                        if (x2 == fx)
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            for (y1 = 1; y1 <= ncol; y1++)
-                            {
-                                AP_rocol[x2, y1] = AP_rocol[x2, y1] + ((-1) * (temppr2[x2]) * (temppr[y1]));
-                            }
-                        }
-                    }
-                    flag = 0;
-                    for (y1 = 1; y1 <= col; y1++)
-                    {
-                        if (AP_rocol[1, y1] != 0)
-                        {
-                            flag++;
-                        }
+                        fx = x1;
+                        fleastpos = leastpos;
                     }
                 }
-            }while (flag == 1);
+            }
+            rfy = AP_rocol[fx, fy];
+            for (y2 = 1; y2 <= ncol; y2++)
+            {
+                AP_rocol[fx, y2] = AP_rocol[fx, y2] / rfy;
+            }
+            for (x2 = 1; x2 <= ro; x2++)
+            {
+                temppr2[x2] = AP_rocol[x2, fy];
+            }
+            for (y2 = 1; y2 <= ncol; y2++)
+            {
+                temppr[y2] = AP_rocol[fx, y2];
+            }
+            for (x2 = 1; x2 <= ro; x2++)
+            {
+                if (x2 == fx)
+                {
+                    continue;
+                }
+                else
+                {
+                    for (y1 = 1; y1 <= ncol; y1++)
+                    {
+                        AP_rocol[x2, y1] = AP_rocol[x2, y1] + ((-1) * (temppr2[x2]) * (temppr[y1]));
+                    }
+                }
+            }
         }
         private void btn_Proceed_Click(object sender, EventArgs e)
         {
@@ -371,9 +369,14 @@ namespace CalQv0._1
             {
                 if (col_i <= col)
                 {
+                    
                     tv = (int)values_UD.Value;
                     inputs.Text = inputs.Text + tv.ToString() + "     ";
                     AP_rocol[ro_i, col_i] = tv;
+                    if (ro_i == 1)
+                    {
+                        oo[ro_i] = tv;
+                    }
                     col_i++;
                 }
                 if (col_i > col)
