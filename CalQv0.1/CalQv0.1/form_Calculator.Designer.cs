@@ -61,10 +61,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(2, 24);
+            this.tabControl1.Location = new System.Drawing.Point(-3, -20);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(602, 417);
+            this.tabControl1.Size = new System.Drawing.Size(610, 467);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -82,7 +82,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(594, 391);
+            this.tabPage1.Size = new System.Drawing.Size(602, 441);
             this.tabPage1.TabIndex = 0;
             // 
             // closeButton
@@ -93,7 +93,7 @@
             this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Location = new System.Drawing.Point(498, 19);
+            this.closeButton.Location = new System.Drawing.Point(560, 10);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(32, 24);
             this.closeButton.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.btn_Proceed.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Proceed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Proceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Proceed.Location = new System.Drawing.Point(256, 221);
+            this.btn_Proceed.Location = new System.Drawing.Point(282, 276);
             this.btn_Proceed.Name = "btn_Proceed";
             this.btn_Proceed.Size = new System.Drawing.Size(32, 24);
             this.btn_Proceed.TabIndex = 4;
@@ -121,7 +121,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(122, 176);
+            this.label2.Location = new System.Drawing.Point(148, 208);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 2;
@@ -132,7 +132,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(144, 132);
+            this.label1.Location = new System.Drawing.Point(170, 164);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 20);
             this.label1.TabIndex = 2;
@@ -140,7 +140,7 @@
             // 
             // columnUD
             // 
-            this.columnUD.Location = new System.Drawing.Point(256, 179);
+            this.columnUD.Location = new System.Drawing.Point(282, 211);
             this.columnUD.Maximum = new decimal(new int[] {
             8,
             0,
@@ -162,7 +162,7 @@
             // 
             // rowUD
             // 
-            this.rowUD.Location = new System.Drawing.Point(256, 132);
+            this.rowUD.Location = new System.Drawing.Point(282, 164);
             this.rowUD.Maximum = new decimal(new int[] {
             8,
             0,
@@ -190,7 +190,7 @@
             this.btn_Back.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Back.Location = new System.Drawing.Point(24, 329);
+            this.btn_Back.Location = new System.Drawing.Point(11, 406);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(32, 24);
             this.btn_Back.TabIndex = 0;
@@ -201,6 +201,7 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
             this.tabPage2.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
+            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.inputs);
             this.tabPage2.Controls.Add(this.rinp);
@@ -214,7 +215,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(594, 391);
+            this.tabPage2.Size = new System.Drawing.Size(602, 441);
             this.tabPage2.TabIndex = 1;
             // 
             // button1
@@ -225,7 +226,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(6, 361);
+            this.button1.Location = new System.Drawing.Point(11, 406);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(32, 24);
             this.button1.TabIndex = 13;
@@ -237,7 +238,7 @@
             this.inputs.AutoSize = true;
             this.inputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputs.ForeColor = System.Drawing.SystemColors.Control;
-            this.inputs.Location = new System.Drawing.Point(298, 280);
+            this.inputs.Location = new System.Drawing.Point(298, 314);
             this.inputs.Name = "inputs";
             this.inputs.Size = new System.Drawing.Size(13, 20);
             this.inputs.TabIndex = 12;
@@ -248,7 +249,7 @@
             this.rinp.AutoSize = true;
             this.rinp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rinp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rinp.Location = new System.Drawing.Point(402, 246);
+            this.rinp.Location = new System.Drawing.Point(402, 280);
             this.rinp.Name = "rinp";
             this.rinp.Size = new System.Drawing.Size(0, 20);
             this.rinp.TabIndex = 11;
@@ -258,7 +259,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(298, 246);
+            this.label4.Location = new System.Drawing.Point(298, 280);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 20);
             this.label4.TabIndex = 10;
@@ -274,7 +275,7 @@
             this.solve.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.solve.Location = new System.Drawing.Point(465, 351);
+            this.solve.Location = new System.Drawing.Point(231, 350);
             this.solve.Name = "solve";
             this.solve.Size = new System.Drawing.Size(122, 34);
             this.solve.TabIndex = 7;
@@ -284,7 +285,7 @@
             // values_UD
             // 
             this.values_UD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.values_UD.Location = new System.Drawing.Point(21, 278);
+            this.values_UD.Location = new System.Drawing.Point(21, 312);
             this.values_UD.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -308,7 +309,7 @@
             this.btn_Confirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Confirm.Location = new System.Drawing.Point(515, 267);
+            this.btn_Confirm.Location = new System.Drawing.Point(127, 306);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(32, 37);
             this.btn_Confirm.TabIndex = 5;
@@ -324,7 +325,7 @@
             this.btn_Add.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add.Location = new System.Drawing.Point(89, 278);
+            this.btn_Add.Location = new System.Drawing.Point(89, 312);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(32, 24);
             this.btn_Add.TabIndex = 4;
@@ -336,7 +337,7 @@
             this.lbl_inputValue.AutoSize = true;
             this.lbl_inputValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_inputValue.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_inputValue.Location = new System.Drawing.Point(20, 246);
+            this.lbl_inputValue.Location = new System.Drawing.Point(20, 280);
             this.lbl_inputValue.Name = "lbl_inputValue";
             this.lbl_inputValue.Size = new System.Drawing.Size(167, 20);
             this.lbl_inputValue.TabIndex = 3;
@@ -344,9 +345,9 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(6, 6);
+            this.listView1.Location = new System.Drawing.Point(6, 40);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(561, 227);
+            this.listView1.Size = new System.Drawing.Size(590, 227);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -359,12 +360,12 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(561, 12);
+            this.button2.Location = new System.Drawing.Point(560, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(32, 24);
             this.button2.TabIndex = 14;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // form_Calculator
             // 
@@ -373,7 +374,6 @@
             this.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
             this.ClientSize = new System.Drawing.Size(605, 444);
             this.ControlBox = false;
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximumSize = new System.Drawing.Size(621, 483);
