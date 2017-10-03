@@ -38,6 +38,8 @@
             this.rowUD = new System.Windows.Forms.NumericUpDown();
             this.btn_Back = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.inputs = new System.Windows.Forms.Label();
             this.rinp = new System.Windows.Forms.Label();
@@ -48,7 +50,7 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.lbl_inputValue = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.columnUD)).BeginInit();
@@ -201,6 +203,8 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
             this.tabPage2.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.inputs);
@@ -217,6 +221,31 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(602, 441);
             this.tabPage2.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(370, 401);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(105, 30);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Erase Values";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::CalQv0._1.Properties.Resources.closeIcon1;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(560, 10);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(32, 24);
+            this.button2.TabIndex = 14;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -243,6 +272,7 @@
             this.inputs.Size = new System.Drawing.Size(13, 20);
             this.inputs.TabIndex = 12;
             this.inputs.Text = " ";
+            this.inputs.Click += new System.EventHandler(this.inputs_Click);
             // 
             // rinp
             // 
@@ -352,20 +382,15 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // button2
+            // button4
             // 
-            this.button2.BackgroundImage = global::CalQv0._1.Properties.Resources.closeIcon1;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(560, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 24);
-            this.button2.TabIndex = 14;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button4.Location = new System.Drawing.Point(481, 401);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(105, 30);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Reset All ";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // form_Calculator
             // 
@@ -414,5 +439,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
