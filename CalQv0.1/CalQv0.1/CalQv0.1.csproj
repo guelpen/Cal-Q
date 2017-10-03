@@ -268,5 +268,11 @@
   <ItemGroup>
     <None Include="Resources\mainmenu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EraseButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ResetButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
