@@ -73,7 +73,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage1.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
+            this.tabPage1.BackgroundImage = global::CalQv0._1.Properties.Resources.mainmenu1;
             this.tabPage1.Controls.Add(this.closeButton);
             this.tabPage1.Controls.Add(this.btn_Proceed);
             this.tabPage1.Controls.Add(this.label2);
@@ -202,7 +202,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
+            this.tabPage2.BackgroundImage = global::CalQv0._1.Properties.Resources.mainmenu1;
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.button2);
@@ -227,6 +227,8 @@
             this.button4.BackgroundImage = global::CalQv0._1.Properties.Resources.ResetButton;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(478, 400);
             this.button4.Name = "button4";
@@ -240,6 +242,8 @@
             this.button3.BackgroundImage = global::CalQv0._1.Properties.Resources.EraseButton;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(302, 349);
             this.button3.Name = "button3";
@@ -313,17 +317,17 @@
             // 
             // solve
             // 
-            this.solve.BackgroundImage = global::CalQv0._1.Properties.Resources.solve;
-            this.solve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.solve.BackgroundImage = global::CalQv0._1.Properties.Resources.SolveNew;
+            this.solve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.solve.Cursor = System.Windows.Forms.Cursors.Hand;
             this.solve.Enabled = false;
             this.solve.FlatAppearance.BorderSize = 0;
             this.solve.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.solve.Location = new System.Drawing.Point(470, 349);
+            this.solve.Location = new System.Drawing.Point(478, 349);
             this.solve.Name = "solve";
-            this.solve.Size = new System.Drawing.Size(122, 34);
+            this.solve.Size = new System.Drawing.Size(114, 30);
             this.solve.TabIndex = 7;
             this.solve.UseVisualStyleBackColor = true;
             this.solve.Click += new System.EventHandler(this.solve_Click);

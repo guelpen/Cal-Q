@@ -303,6 +303,16 @@ namespace CalQv0._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mainmenu1 {
+            get {
+                object obj = ResourceManager.GetObject("mainmenu1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize2 {
             get {
                 object obj = ResourceManager.GetObject("minimize2", resourceCulture);
@@ -376,6 +386,16 @@ namespace CalQv0._1.Properties {
         internal static System.Drawing.Bitmap solve {
             get {
                 object obj = ResourceManager.GetObject("solve", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SolveNew {
+            get {
+                object obj = ResourceManager.GetObject("SolveNew", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

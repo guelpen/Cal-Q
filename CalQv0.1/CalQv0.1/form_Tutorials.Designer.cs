@@ -127,7 +127,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Black;
-            this.tabPage1.BackgroundImage = global::CalQv0._1.Properties.Resources.bg3;
+            this.tabPage1.BackgroundImage = global::CalQv0._1.Properties.Resources.mainmenu1;
             this.tabPage1.Controls.Add(this.button29);
             this.tabPage1.Controls.Add(this.button11);
             this.tabPage1.Controls.Add(this.button1);
@@ -205,7 +205,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Black;
-            this.tabPage2.BackgroundImage = global::CalQv0._1.Properties.Resources.bg3;
+            this.tabPage2.BackgroundImage = global::CalQv0._1.Properties.Resources.mainmenu1;
             this.tabPage2.Controls.Add(this.button30);
             this.tabPage2.Controls.Add(this.button20);
             this.tabPage2.Controls.Add(this.button4);
@@ -217,7 +217,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(573, 336);
+            this.tabPage2.Size = new System.Drawing.Size(604, 446);
             this.tabPage2.TabIndex = 1;
             // 
             // button30
@@ -346,13 +346,13 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
+            this.tabPage3.BackgroundImage = global::CalQv0._1.Properties.Resources.mainmenu1;
             this.tabPage3.Controls.Add(this.button21);
             this.tabPage3.Controls.Add(this.button17);
             this.tabPage3.Controls.Add(this.button10);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(573, 336);
+            this.tabPage3.Size = new System.Drawing.Size(604, 446);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
@@ -407,13 +407,13 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackgroundImage = global::CalQv0._1.Properties.Resources.bg3;
+            this.tabPage4.BackgroundImage = global::CalQv0._1.Properties.Resources.mainmenu1;
             this.tabPage4.Controls.Add(this.button22);
             this.tabPage4.Controls.Add(this.button18);
             this.tabPage4.Controls.Add(this.button12);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(573, 336);
+            this.tabPage4.Size = new System.Drawing.Size(604, 446);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
@@ -468,7 +468,7 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
+            this.tabPage5.BackgroundImage = global::CalQv0._1.Properties.Resources.mainmenu1;
             this.tabPage5.Controls.Add(this.button31);
             this.tabPage5.Controls.Add(this.button23);
             this.tabPage5.Controls.Add(this.button19);
@@ -478,7 +478,7 @@
             this.tabPage5.Controls.Add(this.button13);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(573, 336);
+            this.tabPage5.Size = new System.Drawing.Size(604, 446);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
@@ -550,14 +550,14 @@
             // 
             this.button15.BackColor = System.Drawing.Color.Transparent;
             this.button15.BackgroundImage = global::CalQv0._1.Properties.Resources.step3_lbl3;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Location = new System.Drawing.Point(46, 86);
+            this.button15.Location = new System.Drawing.Point(46, 83);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(381, 52);
+            this.button15.Size = new System.Drawing.Size(470, 52);
             this.button15.TabIndex = 6;
             this.button15.UseVisualStyleBackColor = false;
             // 
@@ -593,7 +593,7 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.BackgroundImage = global::CalQv0._1.Properties.Resources.bg4;
+            this.tabPage6.BackgroundImage = global::CalQv0._1.Properties.Resources.mainmenu1;
             this.tabPage6.Controls.Add(this.button32);
             this.tabPage6.Controls.Add(this.button28);
             this.tabPage6.Controls.Add(this.button27);
@@ -602,7 +602,7 @@
             this.tabPage6.Controls.Add(this.button24);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(573, 336);
+            this.tabPage6.Size = new System.Drawing.Size(604, 446);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
