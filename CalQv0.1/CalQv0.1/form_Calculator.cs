@@ -240,7 +240,7 @@ namespace CalQv0._1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            listView1.Items.Clear();
+            clearAll();
         }
 
         private void add_identity()
@@ -455,11 +455,11 @@ namespace CalQv0._1
             {
                 for (a = 1; a <= col; a++)
                 {
-                   
                     AP_rocol[b, a] = 0;
-
                 }
             }
+            ro_i=1;
+            rinp.Text = "";
             listView1.Items.Clear();
         }
     }
