@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -327,6 +327,10 @@
   <ItemGroup>
     <Content Include="icon_4VT_icon.ico" />
     <Content Include="icon_L7q_icon.ico" />
+    <None Include="Resources\close1.png" />
+    <None Include="Resources\back1.png" />
+    <None Include="Resources\next2.png" />
+    <None Include="Resources\close.png" />
     <None Include="Resources\mainmenu.jpg" />
     <None Include="Resources\SolveNew.png" />
   </ItemGroup>

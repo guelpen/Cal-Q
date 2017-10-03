@@ -89,7 +89,8 @@
             // 
             // closeButton
             // 
-            this.closeButton.BackgroundImage = global::CalQv0._1.Properties.Resources.closeIcon1;
+            this.closeButton.BackgroundImage = global::CalQv0._1.Properties.Resources.close;
+            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.FlatAppearance.BorderSize = 0;
             this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -104,14 +105,14 @@
             // 
             // btn_Proceed
             // 
-            this.btn_Proceed.BackgroundImage = global::CalQv0._1.Properties.Resources.next1;
-            this.btn_Proceed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Proceed.BackgroundImage = global::CalQv0._1.Properties.Resources.next2;
+            this.btn_Proceed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Proceed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Proceed.FlatAppearance.BorderSize = 0;
             this.btn_Proceed.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Proceed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Proceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Proceed.Location = new System.Drawing.Point(282, 276);
+            this.btn_Proceed.Location = new System.Drawing.Point(282, 252);
             this.btn_Proceed.Name = "btn_Proceed";
             this.btn_Proceed.Size = new System.Drawing.Size(32, 24);
             this.btn_Proceed.TabIndex = 4;
@@ -186,13 +187,14 @@
             // 
             // btn_Back
             // 
-            this.btn_Back.BackgroundImage = global::CalQv0._1.Properties.Resources.backIcon;
+            this.btn_Back.BackgroundImage = global::CalQv0._1.Properties.Resources.back1;
+            this.btn_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Back.FlatAppearance.BorderSize = 0;
             this.btn_Back.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Back.Location = new System.Drawing.Point(11, 406);
+            this.btn_Back.Location = new System.Drawing.Point(3, 406);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(32, 24);
             this.btn_Back.TabIndex = 0;
@@ -226,6 +228,7 @@
             // 
             this.button4.BackgroundImage = global::CalQv0._1.Properties.Resources.ResetButton;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -241,6 +244,7 @@
             // 
             this.button3.BackgroundImage = global::CalQv0._1.Properties.Resources.EraseButton;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -254,7 +258,8 @@
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::CalQv0._1.Properties.Resources.closeIcon1;
+            this.button2.BackgroundImage = global::CalQv0._1.Properties.Resources.close;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -269,7 +274,8 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::CalQv0._1.Properties.Resources.backIcon2;
+            this.button1.BackgroundImage = global::CalQv0._1.Properties.Resources.back1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

@@ -84,8 +84,8 @@
             // closeButton
             // 
             this.closeButton.BackColor = System.Drawing.Color.Transparent;
-            this.closeButton.BackgroundImage = global::CalQv0._1.Properties.Resources.closeIcon1;
-            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.closeButton.BackgroundImage = global::CalQv0._1.Properties.Resources.close1;
+            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.FlatAppearance.BorderSize = 0;
             this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
