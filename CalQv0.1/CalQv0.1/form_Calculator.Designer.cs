@@ -98,7 +98,7 @@
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeButton.Location = new System.Drawing.Point(560, 10);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(32, 24);
+            this.closeButton.Size = new System.Drawing.Size(32, 32);
             this.closeButton.TabIndex = 5;
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
@@ -249,7 +249,7 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(302, 349);
+            this.button3.Location = new System.Drawing.Point(238, 400);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 30);
             this.button3.TabIndex = 15;
@@ -265,9 +265,9 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(560, 10);
+            this.button2.Location = new System.Drawing.Point(560, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 24);
+            this.button2.Size = new System.Drawing.Size(32, 32);
             this.button2.TabIndex = 14;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -291,11 +291,11 @@
             // inputs
             // 
             this.inputs.AutoSize = true;
-            this.inputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputs.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputs.ForeColor = System.Drawing.SystemColors.Control;
             this.inputs.Location = new System.Drawing.Point(298, 314);
             this.inputs.Name = "inputs";
-            this.inputs.Size = new System.Drawing.Size(13, 20);
+            this.inputs.Size = new System.Drawing.Size(14, 21);
             this.inputs.TabIndex = 12;
             this.inputs.Text = " ";
             this.inputs.Click += new System.EventHandler(this.inputs_Click);
@@ -313,11 +313,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(298, 280);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 20);
+            this.label4.Size = new System.Drawing.Size(101, 21);
             this.label4.TabIndex = 10;
             this.label4.Text = "Input for row";
             // 
@@ -331,7 +331,7 @@
             this.solve.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.solve.Location = new System.Drawing.Point(478, 349);
+            this.solve.Location = new System.Drawing.Point(358, 400);
             this.solve.Name = "solve";
             this.solve.Size = new System.Drawing.Size(114, 30);
             this.solve.TabIndex = 7;
@@ -365,9 +365,9 @@
             this.btn_Confirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Confirm.Location = new System.Drawing.Point(127, 306);
+            this.btn_Confirm.Location = new System.Drawing.Point(165, 327);
             this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.Size = new System.Drawing.Size(32, 37);
+            this.btn_Confirm.Size = new System.Drawing.Size(50, 50);
             this.btn_Confirm.TabIndex = 5;
             this.btn_Confirm.UseVisualStyleBackColor = true;
             this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
@@ -381,9 +381,9 @@
             this.btn_Add.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add.Location = new System.Drawing.Point(89, 312);
+            this.btn_Add.Location = new System.Drawing.Point(90, 327);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(32, 24);
+            this.btn_Add.Size = new System.Drawing.Size(50, 50);
             this.btn_Add.TabIndex = 4;
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -391,16 +391,19 @@
             // lbl_inputValue
             // 
             this.lbl_inputValue.AutoSize = true;
-            this.lbl_inputValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_inputValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_inputValue.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_inputValue.Location = new System.Drawing.Point(20, 280);
             this.lbl_inputValue.Name = "lbl_inputValue";
-            this.lbl_inputValue.Size = new System.Drawing.Size(167, 20);
+            this.lbl_inputValue.Size = new System.Drawing.Size(167, 21);
             this.lbl_inputValue.TabIndex = 3;
             this.lbl_inputValue.Text = "Input values of Matrix :";
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.Color.Black;
+            this.listView1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.Location = new System.Drawing.Point(6, 40);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(590, 227);

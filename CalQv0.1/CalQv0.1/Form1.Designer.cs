@@ -60,7 +60,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(532, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 24);
+            this.button2.Size = new System.Drawing.Size(32, 32);
             this.button2.TabIndex = 0;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -94,7 +94,7 @@
             this.closeButton.ForeColor = System.Drawing.Color.Transparent;
             this.closeButton.Location = new System.Drawing.Point(561, 12);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(32, 24);
+            this.closeButton.Size = new System.Drawing.Size(32, 32);
             this.closeButton.TabIndex = 1;
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
