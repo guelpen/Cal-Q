@@ -29,6 +29,8 @@ namespace CalQv0._1
         string tempstr,tempstr2;
         string strk2 = "";
         string[] addedId = new string[9];
+        string[] txtString = new string[9];
+        public static ListViewItem lvi;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -123,7 +125,7 @@ namespace CalQv0._1
             }
             for (x3 = 1; x3 <= ro; x3++)
             {
-                ListViewItem lvi = new ListViewItem();
+                 lvi = new ListViewItem();
                 if (x3 != 1)
                 {
                     lvi.Text = AP_rocol[x3, 1].ToString();
@@ -183,6 +185,18 @@ namespace CalQv0._1
             Application.Exit();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            erase_Values();
+        }
+
+   
+
+        private void inputs_Click(object sender, EventArgs e)
+        {
+
+        }
+        
         private void identity_Generator()
         {
             int indx, indxc;
@@ -222,6 +236,11 @@ namespace CalQv0._1
                 strk2 = strk2 + exclude[x].ToString();
             }
             add_identity();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
         }
 
         private void add_identity()
@@ -268,6 +287,7 @@ namespace CalQv0._1
             decimal[] temppr = new decimal[17];
             decimal[] temppr2 = new decimal[17];
             decimal rfy;
+            int unboundedCounter=0;
             for (y1 = 2; y1 <= ncol; y1++)
             {
                 mosneg = AP_rocol[1, y1];
@@ -284,12 +304,23 @@ namespace CalQv0._1
             {
                 if (AP_rocol[x1, fy] > 0)
                 {
+
                     leastpos = AP_rocol[x1, 1] / AP_rocol[x1, fy];
                     if (leastpos < fleastpos && leastpos > 0)
                     {
                         fx = x1;
                         fleastpos = leastpos;
                     }
+
+                }
+                else
+                    unboundedCounter++;
+                
+                
+                if (unboundedCounter==ro-1)
+                {
+                    MessageBox.Show("Unbounded Form");
+                    clearAll();
                 }
             }
             rfy = AP_rocol[fx, fy];
@@ -372,12 +403,14 @@ namespace CalQv0._1
                     
                     tv = (int)values_UD.Value;
                     inputs.Text = inputs.Text + tv.ToString() + "     ";
+                    
                     AP_rocol[ro_i, col_i] = tv;
                     if (ro_i == 1)
                     {
                         oo[ro_i] = tv;
                     }
                     col_i++;
+                    txtString[col_i] = inputs.Text;
                 }
                 if (col_i > col)
                 {
@@ -385,6 +418,49 @@ namespace CalQv0._1
                     btn_Confirm.Enabled = true;
                 }
             }
+        }
+        //function for erasing user input values
+        private void erase_Values()
+        {
+            
+            if (ro_i <= ro)
+            {
+                inputs.Text = txtString[col_i - 1];
+                if (col_i <= col)
+                {
+
+                    tv = 0;
+                    AP_rocol[ro_i, col_i] = 0;
+                    col_i--;
+                }
+                if (col_i <= 0)
+                {
+                    MessageBox.Show("Nothing to Erase");
+                    col_i = 1;
+                }
+                if(col_i>col)
+                {
+                    btn_Add.Enabled = true;
+                    col_i--;
+                }
+                
+            }
+        }
+        //function name explains itself.
+        private void clearAll()
+        {
+            int a,b=1;
+            //looping to clear all values of AP_rocol
+            for (b = 1; b <= ro; b++)
+            {
+                for (a = 1; a <= col; a++)
+                {
+                   
+                    AP_rocol[b, a] = 0;
+
+                }
+            }
+            listView1.Items.Clear();
         }
     }
 }
