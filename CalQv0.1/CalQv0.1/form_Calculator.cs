@@ -354,7 +354,7 @@ namespace CalQv0._1
         private void btn_Proceed_Click(object sender, EventArgs e)
         {
             lbl_inputValue.Text = "Input the value of b: ";
-            listView1.Columns.Add("b");
+            listView1.Columns.Add(" ");
             ro = (int)rowUD.Value;
             col= (int)columnUD.Value;
             tabControl1.SelectedIndex = 1;

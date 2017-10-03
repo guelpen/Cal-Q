@@ -38,6 +38,7 @@
             this.rowUD = new System.Windows.Forms.NumericUpDown();
             this.btn_Back = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.lbl_inputValue = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.columnUD)).BeginInit();
@@ -222,13 +222,29 @@
             this.tabPage2.Size = new System.Drawing.Size(602, 441);
             this.tabPage2.TabIndex = 1;
             // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::CalQv0._1.Properties.Resources.ResetButton;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(478, 400);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(114, 30);
+            this.button4.TabIndex = 16;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(370, 401);
+            this.button3.BackgroundImage = global::CalQv0._1.Properties.Resources.EraseButton;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(302, 349);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 30);
+            this.button3.Size = new System.Drawing.Size(114, 30);
             this.button3.TabIndex = 15;
-            this.button3.Text = "Erase Values";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -305,7 +321,7 @@
             this.solve.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.solve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.solve.Location = new System.Drawing.Point(231, 350);
+            this.solve.Location = new System.Drawing.Point(470, 349);
             this.solve.Name = "solve";
             this.solve.Size = new System.Drawing.Size(122, 34);
             this.solve.TabIndex = 7;
@@ -381,16 +397,6 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(481, 401);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(105, 30);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Reset All ";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // form_Calculator
             // 
